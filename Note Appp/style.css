@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    margin: 0;
+    background-color: rgb(240, 240, 240);
+    overflow: hidden;
+}
+#notesApp{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+#notesApp > div{
+    height: 100vh;
+}
+#notesSidebar{
+    width: 25%;
+    overflow-y: auto;
+    padding: 0 min(5rem,15px);
+}
+#notesSidebar > button{
+    width: 100%;
+    padding-top: min(5rem,15px);
+    padding-bottom: min(5rem,15px);
+    font-size: min(6.56rem,20px);
+    background-color: rgb(1, 114, 1);
+    color: white;
+    border: none;
+    outline: hidden;
+    position: sticky;
+    top: 0;
+    margin-top: min(10rem,30px);
+    margin-bottom: min(5rem,15px);
+    z-index: 100;
+}
+.notesPreview{
+    width: 65%;
+    padding: min(10rem,30px);
+    position: relative;
+}
+.notesPreview > h1{
+    color: rgb(1, 114, 1);
+}
+.note{
+    padding: min(5rem,15px) min(5rem,15px) min(10rem,30px) ;
+    margin-bottom: 5px;
+    border-bottom: 1px solid gray;
+    position: relative;
+}
+.note h3{
+    margin-top: 0;
+    margin-bottom: min(5rem,15px);
+}
+.note p{
+    margin-top: 0;
+}
+.note small{
+    font-style: italic;
+    font-size: smaller;
+    position: absolute;
+    bottom: min(5rem,15px);
+    right: 0;
+    color: rgb(71, 70, 70);
+}
+
+.noteTitleInput{
+    width: 100%;
+    border: 0;
+    outline: hidden;
+    font-size: min(10rem,30px);
+    display: block;
+    margin-bottom: min(10rem,30px);
+    background-color: rgb(240, 240, 240);
+
+}
+.noteTitleInput:focus{
+    outline: none;
+}
+.noteBodyInput{
+    width: 100%;
+    height: min(100rem,300px);
+    font-size: min(7rem,20px);
+    padding-top: min(5rem,15px);
+    border-left: 0;
+    border-right: 0;
+    background-color: rgb(240, 240, 240);
+
+}
+.noteBodyInput:focus{
+    outline: none;
+}
+.selected{
+    background-color: rgb(219, 219, 219);
+    font-weight: bolder;
+}
+.action-button{
+    color: rgb(41, 41, 41);
+    font-size: min(5rem,15px);
+    position: absolute;
+    top: min(1rem,5px);
+    right: min(1rem,5px);
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-top-right-radius: 5px;
+    padding: 5px 10px;
+
+}
+.edit{
+    right: min(12rem,35px)
+}
+.delete:hover{
+    background-color: rgb(210, 21, 21);
+    transition: 0.3s;
+    color: white;
+}
+.edit:hover{
+    background-color: rgb(85, 85, 85);
+    transition: 0.3s;
+    color: white;
+}
+.save{
+    background-color: rgb(1, 114, 1);
+    padding: 15px 30px;
+    outline: none;
+    border: 0;
+    color: white;
+    position: absolute;
+    left: min(10rem,30px);
+    bottom: min(40rem,120px);
+}
